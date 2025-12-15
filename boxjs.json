@@ -491,10 +491,5 @@
       description: "收到天气预警时立即语音播报",
       default: true
     }
-  }
-});
-
-$done({ body: JSON.stringify(body) });
-    }
   ]
 }
