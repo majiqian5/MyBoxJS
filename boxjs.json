@@ -458,22 +458,43 @@
       ]
     },
     {
-      "id": "nCov",
-      "name": "疫情监控",
-      "author": "@YangZhaocool",
-      "repo": "https://github.com/Peng-YM/QuanX",
-      "keys": [
-        "@nCov.api"
-      ],
-      "settings": [
-        {
-          "id": "@nCov.api"
-        }
-      ],
-      "icons": [
-        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/COVID-19.png"
-      ],
-      "script": "https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/nCov.js"
+      "id: "caiyun_weather",
+  name: "彩云天气",
+  icon: "cloud.fill",
+  color: "#007AFF",
+  author: "Peng-YM",
+  description: "彩云天气脚本配置",
+  schema: "caiyun",
+  data: {
+    token: {
+      title: "彩云天气Token",
+      type: "string",
+      description: "请从 https://t.me/cool_scripts 获取",
+      required: true
+    },
+    voice_enabled: {
+      title: "语音播报",
+      type: "boolean",
+      description: "启用天气语音播报功能",
+      default: false
+    },
+    voice_times: {
+      title: "播报时段",
+      type: "array",
+      description: "选择语音播报的时段",
+      options: ["早上6-9点", "中午12-14点", "下午18-21点"],
+      default: ["早上6-9点", "下午18-21点"]
+    },
+    alert_voice: {
+      title: "预警播报",
+      type: "boolean",
+      description: "收到天气预警时立即语音播报",
+      default: true
+    }
+  }
+});
+
+$done({ body: JSON.stringify(body) });
     }
   ]
 }
