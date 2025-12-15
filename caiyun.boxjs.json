@@ -4,6 +4,8 @@
     "icon": "cloud.rain",
     "tintColor": "#FF9800",
     "description": "彩云天气API配置，支持分钟级降水和TTS语音播报",
+    "author": "Peng-YM & majiqian5",
+    "version": "0.7",
     "settings": [
       {
         "key": "token",
@@ -103,13 +105,13 @@
             "description": "天气数据更新间隔",
             "type": "select",
             "options": [
-              { "title": "每1小时", "value": 1 },
-              { "title": "每2小时", "value": 2 },
-              { "title": "每3小时", "value": 3 },
-              { "title": "每4小时", "value": 4 },
-              { "title": "每6小时", "value": 6 }
+              { "title": "每1小时", "value": "1" },
+              { "title": "每2小时", "value": "2" },
+              { "title": "每3小时", "value": "3" },
+              { "title": "每4小时", "value": "4" },
+              { "title": "每6小时", "value": "6" }
             ],
-            "default": 2
+            "default": "2"
           },
           {
             "key": "alert_notification",
