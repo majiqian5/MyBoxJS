@@ -1,0 +1,28 @@
+{
+  "caiyun": {
+    "title": "彩云天气",
+    "icon": "cloud.rain",
+    "tintColor": "#FF9800",
+    "description": "彩云天气配置",
+    "settings": [
+      {
+        "key": "caiyun_token",
+        "title": "彩云Token",
+        "type": "text",
+        "required": true
+      },
+      {
+        "key": "tencent_token",
+        "title": "腾讯Token",
+        "type": "text",
+        "required": false
+      },
+      {
+        "key": "tts_enabled",
+        "title": "启用语音播报",
+        "type": "boolean",
+        "default": true
+      }
+    ]
+  }
+}
