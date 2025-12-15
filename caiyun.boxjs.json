@@ -1,73 +1,88 @@
 {
-  "caiyun": {
-    "title": "彩云天气",
-    "icon": "cloud.rain",
-    "tintColor": "#FF9800",
-    "description": "彩云天气配置，支持TTS语音播报",
-    "settings": [
-      {
-        "key": "caiyun_token",
-        "title": "彩云天气令牌",
-        "description": "从 https://t.me/cool_scripts 获取",
-        "type": "text",
-        "default": "",
-        "required": true
-      },
-      {
-        "key": "tencent_token",
-        "title": "腾讯地图令牌",
-        "description": "用于获取详细地址（可选）",
-        "type": "text",
-        "default": "",
-        "required": false
-      },
-      {
-        "key": "tts_enabled",
-        "title": "启用TTS语音播报",
-        "description": "是否启用语音播报天气",
-        "type": "boolean",
-        "default": true,
-        "required": false
-      },
-      {
-        "key": "tts_speed",
-        "title": "语音播报速度",
-        "description": "0.1-2.0之间，默认0.6",
-        "type": "number",
-        "default": 0.6,
-        "min": 0.1,
-        "max": 2.0,
-        "step": 0.1,
-        "required": false
-      },
-      {
-        "key": "tts_start_hour",
-        "title": "播报开始时间",
-        "description": "开始播报的小时（0-23）",
-        "type": "number",
-        "default": 8,
-        "min": 0,
-        "max": 23,
-        "required": false
-      },
-      {
-        "key": "tts_end_hour",
-        "title": "播报结束时间",
-        "description": "结束播报的小时（0-23）",
-        "type": "number",
-        "default": 22,
-        "min": 0,
-        "max": 23,
-        "required": false
-      },
-      {
-        "key": "minutely_enabled",
-        "title": "启用分钟级天气",
-        "description": "显示分钟级降水预报",
-        "type": "boolean",
-        "default": true,
-        "required": false
-      }
-    ]
-  }
+  "id": "caiyun-weather.sub",
+  "name": "彩云天气订阅",
+  "author": "@majiqian5",
+  "icon": "https://raw.githubusercontent.com/58xinian/icon/master/Weather/CLOUDY.png",
+  "repo": "https://github.com/majiqian5/MyBoxJS",
+  "apps": [
+    {
+      "id": "CaiyunWeather",
+      "name": "彩云天气",
+      "keys": [
+        "@caiyun.token.caiyun",
+        "@caiyun.token.tencent",
+        "@caiyun.tts.enabled",
+        "@caiyun.tts.speed",
+        "@caiyun.tts.schedule_start",
+        "@caiyun.tts.schedule_end",
+        "@caiyun.minutely.enabled",
+        "@caiyun.display_location"
+      ],
+      "settings": [
+        {
+          "id": "@caiyun.token.caiyun",
+          "name": "彩云天气API Token",
+          "val": "",
+          "type": "text",
+          "desc": "获取地址：https://t.me/cool_scripts"
+        },
+        {
+          "id": "@caiyun.token.tencent",
+          "name": "腾讯地图API Token（可选）",
+          "val": "",
+          "type": "text",
+          "desc": "用于获取详细地址信息"
+        },
+        {
+          "id": "@caiyun.tts.enabled",
+          "name": "启用TTS语音播报",
+          "val": true,
+          "type": "boolean",
+          "desc": "是否启用语音播报天气"
+        },
+        {
+          "id": "@caiyun.tts.speed",
+          "name": "语音播报速度",
+          "val": 0.6,
+          "type": "number",
+          "desc": "0.1-2.0，默认0.6"
+        },
+        {
+          "id": "@caiyun.tts.schedule_start",
+          "name": "播报开始时间",
+          "val": 8,
+          "type": "number",
+          "desc": "开始播报的小时（0-23）"
+        },
+        {
+          "id": "@caiyun.tts.schedule_end",
+          "name": "播报结束时间",
+          "val": 22,
+          "type": "number",
+          "desc": "结束播报的小时（0-23）"
+        },
+        {
+          "id": "@caiyun.minutely.enabled",
+          "name": "启用分钟级天气",
+          "val": true,
+          "type": "boolean",
+          "desc": "显示分钟级降水预报"
+        },
+        {
+          "id": "@caiyun.display_location",
+          "name": "显示位置信息",
+          "val": false,
+          "type": "boolean",
+          "desc": "在日志中显示位置信息"
+        }
+      ],
+      "author": "@majiqian5",
+      "repo": "https://github.com/majiqian5/MyBoxJS",
+      "icons": [
+        "https://raw.githubusercontent.com/58xinian/icon/master/Weather/CLOUDY_mini.png",
+        "https://raw.githubusercontent.com/58xinian/icon/master/Weather/CLOUDY.png"
+      ],
+      "script": "https://raw.githubusercontent.com/majiqian5/MyBoxJS/main/Tasks/caiyun.js"
+    }
+  ]
 }
