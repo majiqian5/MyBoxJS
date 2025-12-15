@@ -3,25 +3,28 @@
     "title": "彩云天气",
     "icon": "cloud.rain",
     "tintColor": "#FF9800",
-    "description": "彩云天气配置",
+    "description": "彩云天气配置，支持TTS语音播报",
     "settings": [
       {
         "key": "caiyun_token",
-        "title": "彩云天气Token",
+        "title": "彩云天气令牌",
+        "description": "从 https://t.me/cool_scripts 获取",
         "type": "text",
         "default": "",
         "required": true
       },
       {
         "key": "tencent_token",
-        "title": "腾讯地图Token",
+        "title": "腾讯地图令牌",
+        "description": "用于获取详细地址（可选）",
         "type": "text",
         "default": "",
         "required": false
       },
       {
         "key": "tts_enabled",
-        "title": "启用语音播报",
+        "title": "启用TTS语音播报",
+        "description": "是否启用语音播报天气",
         "type": "boolean",
         "default": true,
         "required": false
@@ -29,11 +32,40 @@
       {
         "key": "tts_speed",
         "title": "语音播报速度",
+        "description": "0.1-2.0之间，默认0.6",
         "type": "number",
         "default": 0.6,
         "min": 0.1,
         "max": 2.0,
         "step": 0.1,
+        "required": false
+      },
+      {
+        "key": "tts_start_hour",
+        "title": "播报开始时间",
+        "description": "开始播报的小时（0-23）",
+        "type": "number",
+        "default": 8,
+        "min": 0,
+        "max": 23,
+        "required": false
+      },
+      {
+        "key": "tts_end_hour",
+        "title": "播报结束时间",
+        "description": "结束播报的小时（0-23）",
+        "type": "number",
+        "default": 22,
+        "min": 0,
+        "max": 23,
+        "required": false
+      },
+      {
+        "key": "minutely_enabled",
+        "title": "启用分钟级天气",
+        "description": "显示分钟级降水预报",
+        "type": "boolean",
+        "default": true,
         "required": false
       }
     ]
